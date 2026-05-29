@@ -120,6 +120,7 @@ Je crée un dashboard avec quatre panels :
 
 Chaque panel est configuré avec `InstanceId = i-048b539f096017d7c`, période de 60 secondes, statistique Average.
 
+
 ## Validation
 
 Pour valider le système de monitoring de bout en bout, je simule une charge CPU sur `monitoring-lab-instance` :
@@ -130,6 +131,9 @@ stress --cpu 2 --timeout 120
 ```
 
 Le pic CPU est visible dans le dashboard Grafana dans les minutes suivant le test, confirmant que la chaîne complète fonctionne : CloudWatch Agent → CloudWatch → Grafana.
+
+
+![grafana_screen](../assets/screenshots/grafana_screen.png)
 
 ## Bonnes pratiques appliquées
 
